@@ -1,0 +1,76 @@
+/** 
+ * Custom CSS for flat themes (plain, plain-dark, flat, mixed, vertigo) 
+ * of the Tree Style Tab extension. 
+ *
+ * @author mbellier
+ */
+
+/* move close button to the left */
+:root.left .tab .twisty {
+  order: 10000;
+}
+:root.left .tab .closebox {
+  order: -1;
+}
+
+/* hide favicon on hover */
+.tab:hover .favicon {
+  opacity: 0;
+}
+.tab .favicon {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+/* show close button on hover, replace favicon */
+.tab:not(:hover) .closebox {
+  display: none;
+}
+.tab .closebox {
+  background: var(--tab-surface-active-hover);
+  color: var(--tab-text);
+}
+.tab .closebox:hover  {
+  background: var(--tab-border);
+  color: var(--tab-text);
+}
+.tab.active .closebox:hover {
+  background: var(--tab-surface-active);
+  color: var(--tab-text);
+}
+.tab.active .closebox:not(:hover) {
+  background: var(--tab-surface-hover);
+  color: var(--tab-text);
+}
+.tab .closebox {
+  position: absolute;
+  height: 45px;
+  width: 28px !important;
+  margin-left: -3px;
+  margin-right: 5px;
+  opacity: 1;
+  padding-top: 16px;
+  padding-bottom: 25px;
+  padding-left: 10px;
+  padding-right: 4px;
+}
+
+/* tab status */
+.tab.unread .label {
+  font-style: italic !important;
+}
+.tab.discarded .label {
+  opacity: 0.6;
+}
+
+
+
+/* hide scroll bar */
+:root.left #tabbar.overflow,
+#tabContextMenu,
+#tabContextMenu ul {
+  margin-left: -17px;
+}
+:root.right #tabbar.overflow {
+  margin-right: -17px;
+}
