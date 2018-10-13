@@ -1,0 +1,18 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* move window buttons to the right */
+#nav-bar {
+    margin-right: 60px;
+}
+#titlebar-max {
+  -moz-box-ordinal-group: 0;
+}
+#titlebar-content {
+  direction: rtl;
+}
+#TabsToolbar {
+  direction: rtl;
+}
+#tabbrowser-tabs {
+  direction: ltr;
+}
