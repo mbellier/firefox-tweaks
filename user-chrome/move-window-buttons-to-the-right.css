@@ -1,6 +1,7 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
-/* move window buttons to the right */
+/* move window buttons to the right 
+  (otherwise, check "show title bar" in the customize palette) */
 #nav-bar {
     margin-right: 60px;
 }
